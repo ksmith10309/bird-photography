@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { container, heading, navLinks, navLinkItem, navLinkText, siteTitle, section } from './layout.module.css'
+import { container, heading, navLinks, navLinkItem, navLinkItemLast, navLinkText, siteTitle, section } from './layout.module.css'
 import "@fontsource/architects-daughter"
 import "@fontsource/cairo"
 
@@ -20,7 +20,7 @@ const Layout = ({ pageTitle, children }) => {
           <li className={navLinkItem}>
             <Link to="/backyard" className={navLinkText}>Backyard</Link>
           </li>
-          <li className={navLinkItem}>
+          <li className={navLinkItemLast}>
             <Link to="/outandabout" className={navLinkText}>Out and About</Link>
           </li>
         </ul>

@@ -3,16 +3,15 @@ body {
 }
 
 .container {
+  font-family: sans-serif;
   margin: auto;
   max-width: 500px;
-  font-family: sans-serif;
 }
 
 .site-title {
   color: NavajoWhite;
   font-family: "Architects Daughter";
   font-size: 3rem;
-  font-weight: 700;
   margin: 3rem 0 2rem 0;
 }
 
@@ -36,6 +35,10 @@ body {
   padding-right: 2rem;
 }
 
+.nav-link-item-last {
+  padding-right: 0;
+}
+
 .nav-link-text {
   color: white;
 }
@@ -43,4 +46,18 @@ body {
 .section {
   color: white;
   font-family: "Cairo";
+}
+
+@media (max-width: 800px) {
+  .site-title {
+    font-size: 2.4rem;
+  }
+
+  .nav-links {
+    font-size: 1.2rem;
+  }
+
+  .nav-link-item {
+    padding-right: 1.7rem;
+  }
 }
