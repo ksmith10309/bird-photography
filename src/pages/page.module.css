@@ -14,3 +14,19 @@
   margin-right: auto;
   max-width: 50%;
 }
+
+.home-image {
+  display: block;
+  margin-bottom: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  max-width: 100%;
+}
+
+.about-quote {
+  color: NavajoWhite;
+  font-style: italic;
+  padding: 10px;
+  text-align: center;
+}
