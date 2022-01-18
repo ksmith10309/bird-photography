@@ -16,7 +16,7 @@ body {
 }
 
 .heading {
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid rgb(175, 175, 175);
   color: LightSkyBlue;
   font-family: "Architects Daughter";
   margin: 2rem 0 0 0;
@@ -40,6 +40,11 @@ body {
 }
 
 .nav-link-text {
+  color: rgb(175, 175, 175);
+  text-decoration: none;
+}
+
+.active-nav-link-text {
   color: white;
 }
 
