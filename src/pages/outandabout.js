@@ -16,11 +16,13 @@ const OutAndAboutPage = ({ data }) => {
                 {node.childMdx.frontmatter.title}
               </Link>
             </h2>
-            <img
-              className={pageImage}
-              src={node.childMdx.frontmatter.featuredImgUrl}
-              alt={node.childMdx.frontmatter.featuredImgAlt}
-            />
+            <Link to={`/outandabout/${node.childMdx.slug}`}>
+              <img
+                className={pageImage}
+                src={node.childMdx.frontmatter.featuredImgUrl}
+                alt={node.childMdx.frontmatter.featuredImgAlt}
+              />
+            </Link>
           </article>
         ))
       }
