@@ -1,15 +1,7 @@
 import * as React from "react"
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout'
-
-const imageStyles = {
-  display: "block",
-  marginBottom: "10%",
-  marginTop: "10%",
-  marginLeft: "auto",
-  marginRight: "auto",
-  maxWidth: "100%",
-}
+import { entryImage } from './entry.module.css'
 
 const BirdEntry = ({ pageContext }) => {
   const { data } = pageContext
@@ -19,7 +11,7 @@ const BirdEntry = ({ pageContext }) => {
         {data.body}
       </MDXRenderer>
       <img
-        style={imageStyles}
+        className={entryImage}
         src={data.frontmatter.featuredImgUrl}
         alt={data.frontmatter.featuredImgAlt}
       />

@@ -1,12 +1,14 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { container, heading, navLinks, navLinkItem, navLinkText, siteTitle } from './layout.module.css'
+import { container, heading, navLinks, navLinkItem, navLinkText, siteTitle, section } from './layout.module.css'
+import "@fontsource/architects-daughter"
+import "@fontsource/cairo"
 
 const Layout = ({ pageTitle, children }) => {
   return (
     <div className={container}>
       <title>Bird Photography | {pageTitle}</title>
-      <header className={siteTitle}>Bird Photography</header>
+      <header className={siteTitle}>BIRD PHOTOGRAPHY</header>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
@@ -25,7 +27,9 @@ const Layout = ({ pageTitle, children }) => {
       </nav>
       <main>
         <h1 className={heading}>{pageTitle}</h1>
-        {children}
+        <section className={section}>
+          {children}
+        </section>
       </main>
     </div>
   )

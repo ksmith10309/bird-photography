@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(40, 40, 40);
+}
+
 .container {
   margin: auto;
   max-width: 500px;
@@ -5,18 +9,25 @@
 }
 
 .site-title {
+  color: NavajoWhite;
+  font-family: "Architects Daughter";
   font-size: 3rem;
-  color: gray;
   font-weight: 700;
-  margin: 3rem 0;
+  margin: 3rem 0 2rem 0;
 }
 
 .heading {
-  color: rebeccapurple;
+  border-bottom: 2px solid gray;
+  color: LightSkyBlue;
+  font-family: "Architects Daughter";
+  margin: 2rem 0 0 0;
+  padding: 15px 0px;
 }
 
 .nav-links {
   display: flex;
+  font-family: "Cairo";
+  font-size: 1.5rem;
   list-style: none;
   padding-left: 0;
 }
@@ -26,5 +37,10 @@
 }
 
 .nav-link-text {
-  color: black;
+  color: white;
+}
+
+.section {
+  color: white;
+  font-family: "Cairo";
 }
