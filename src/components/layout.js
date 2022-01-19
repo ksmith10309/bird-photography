@@ -24,12 +24,14 @@ const Layout = ({ pageTitle, children }) => {
           <li className={navLinkItem}>
             <Link to="/backyard"
               className={navLinkText}
-              activeClassName={activeNavLinkText}>Backyard</Link>
+              activeClassName={activeNavLinkText}
+              partiallyActive={true}>Backyard</Link>
           </li>
           <li className={navLinkItemLast}>
             <Link to="/outandabout"
               className={navLinkText}
-              activeClassName={activeNavLinkText}>Out and About</Link>
+              activeClassName={activeNavLinkText}
+              partiallyActive={true}>Out and About</Link>
           </li>
         </ul>
       </nav>
