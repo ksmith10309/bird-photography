@@ -2,6 +2,7 @@ import * as React from "react"
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout'
 import { entryImage } from './entry.module.css'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const BirdEntry = ({ pageContext }) => {
   const { data } = pageContext
@@ -10,11 +11,12 @@ const BirdEntry = ({ pageContext }) => {
       <MDXRenderer>
         {data.body}
       </MDXRenderer>
-      <img
-        className={entryImage}
-        src={data.frontmatter.featuredImgUrl}
-        alt={data.frontmatter.featuredImgAlt}
-      />
+      <div className={entryImage}>
+        <GatsbyImage
+          image={data.featuredImg.childImageSharp.gatsbyImageData}
+          alt={data.frontmatter.featuredImgAlt}
+        />
+      </div>
     </Layout>
   )
 }

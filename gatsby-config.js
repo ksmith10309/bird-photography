@@ -17,6 +17,13 @@ module.exports = {
                 path: `${__dirname}/outandabout`
             }
         },
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: `home`,
+                path: `${__dirname}/home`
+            }
+        },
         "gatsby-plugin-mdx",
         "gatsby-plugin-image",
         {
