@@ -17,6 +17,17 @@ module.exports = {
                 path: `${__dirname}/outandabout`
             }
         },
-        "gatsby-plugin-mdx"
+        "gatsby-plugin-mdx",
+        "gatsby-plugin-image",
+        {
+            resolve: "gatsby-plugin-sharp",
+            options: {
+                defaults: {
+                    quality: 50,
+                    placeholder: 'blurred',
+                }
+            }
+        },
+        "gatsby-transformer-sharp",
     ]
 }

@@ -1,3 +1,5 @@
+// Programmatically Creating Pages 
+
 const path = require("path")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
@@ -37,4 +39,48 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+}
+
+// Preprocessing External Images
+
+const { createRemoteFileNode } = require("gatsby-source-filesystem")
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+
+  createTypes(`
+    type Mdx implements Node {
+      frontmatter: Frontmatter
+      featuredImg: File @link(from: "fields.featuredImgId")
+    }
+    type Frontmatter {
+      title: String
+      featuredImgUrl: String
+      featuredImgAlt: String
+      path: String
+    }
+  `)
+}
+
+exports.onCreateNode = async ({
+  node,
+  actions: { createNode, createNodeField },
+  createNodeId,
+  getCache,
+}) => {
+  if (
+    node.internal.type === "Mdx" &&
+    node.frontmatter.featuredImgUrl !== null
+  ) {
+    const fileNode = await createRemoteFileNode({
+      url: node.frontmatter.featuredImgUrl,
+      parentNodeId: node.id,
+      createNode,
+      createNodeId,
+      getCache
+    })
+    if (fileNode) {
+      createNodeField({ node, name: "featuredImgId", value: fileNode.id })
+    }
+  }
 }

@@ -1,12 +1,14 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
-import { pageHeading, pageLink, pageImage } from './page.module.css'
+import { pageHeading, pageLink, pageImage, pageGrid } from './page.module.css'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const BackyardPage = ({ data }) => {
   return (
     <Layout pageTitle="Backyard">
       <p>Here are the birds that we've seen in our backyard:</p>
+      <div className={pageGrid}>
       {
         data.allFile.nodes.map(node => (
           <article key={node.childMdx.id}>
@@ -16,16 +18,18 @@ const BackyardPage = ({ data }) => {
                 {node.childMdx.frontmatter.title}
               </Link>       
             </h2>
-            <Link to={`/backyard/${node.childMdx.slug}`}>
-              <img
-                className={pageImage}
-                src={node.childMdx.frontmatter.featuredImgUrl}
-                alt={node.childMdx.frontmatter.featuredImgAlt}
-              />
-            </Link>
+            <div className={pageImage}>
+              <Link to={`/backyard/${node.childMdx.slug}`}>
+                <GatsbyImage
+                  image={node.childMdx.featuredImg.childImageSharp.gatsbyImageData}
+                  alt={node.childMdx.frontmatter.featuredImgAlt}
+                />
+              </Link>
+            </div>
           </article>
         ))
       }
+      </div>
     </Layout>
   )
 }
@@ -37,11 +41,16 @@ export const query = graphql`
         childMdx {
           frontmatter {
             title
-            featuredImgUrl
             featuredImgAlt
           }
+          featuredImg {
+            childImageSharp {
+              gatsbyImageData(
+                width: 400
+              )
+            }
+          }
           id
-          body
           slug
         }
       }
