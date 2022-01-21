@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout'
 import { entryImage } from './entry.module.css'
@@ -14,10 +14,12 @@ const BirdEntry = ({ pageContext }) => {
       {
         data.featuredImgFiles.map((file, index) => (
           <div key={file.childImageSharp.id} className={entryImage}>
-            <GatsbyImage
-              image={file.childImageSharp.gatsbyImageData}
-              alt={data.frontmatter.featuredImgAlts[index]}
-            />
+            <a href={data.frontmatter.featuredImgUrls[index]} target="_blank" rel="noopener noreferrer">
+              <GatsbyImage
+                image={file.childImageSharp.gatsbyImageData}
+                alt={data.frontmatter.featuredImgAlts[index]}
+              />
+            </a>
           </div>
         ))
       }

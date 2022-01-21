@@ -19,6 +19,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             frontmatter {
               title
+              featuredImgUrls
               featuredImgAlts
               path
             }
