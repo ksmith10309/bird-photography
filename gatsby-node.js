@@ -10,7 +10,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       query {
         allMdx {
           nodes {
-            featuredImg {
+            featuredImgFiles {
               childImageSharp {
                 gatsbyImageData(
                   width: 800
@@ -19,8 +19,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             frontmatter {
               title
-              featuredImgUrl
-              featuredImgAlt
+              featuredImgAlts
               path
             }
             body
@@ -58,12 +57,12 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(`
     type Mdx implements Node {
       frontmatter: Frontmatter
-      featuredImg: File @link(from: "fields.featuredImgId")
+      featuredImgFiles: [File] @link(from: "fields.featuredImgIds")
     }
-    type Frontmatter {
+    type Frontmatter @dontInfer {
       title: String
-      featuredImgUrl: String
-      featuredImgAlt: String
+      featuredImgUrls: [String]
+      featuredImgAlts: [String]
       path: String
     }
   `)
@@ -77,17 +76,32 @@ exports.onCreateNode = async ({
 }) => {
   if (
     node.internal.type === "Mdx" &&
-    node.frontmatter.featuredImgUrl !== null
+    node.frontmatter &&
+    node.frontmatter.featuredImgUrls
   ) {
-    const fileNode = await createRemoteFileNode({
-      url: node.frontmatter.featuredImgUrl,
-      parentNodeId: node.id,
-      createNode,
-      createNodeId,
-      getCache
-    })
-    if (fileNode) {
-      createNodeField({ node, name: "featuredImgId", value: fileNode.id })
+    const fileNodes = await Promise.all(
+      node.frontmatter.featuredImgUrls.map((url) => {
+        try {
+          return createRemoteFileNode({
+            url,
+            parentNodeId: node.id,
+            createNode,
+            createNodeId,
+            getCache
+          })
+        } catch (error) {
+          console.error(error)
+        }
+      })
+    )
+    if (fileNodes) {
+      createNodeField({
+        node,
+        name: "featuredImgIds",
+        value: fileNodes.map((image) => {
+          return image.id
+        })
+      })
     }
   }
 }

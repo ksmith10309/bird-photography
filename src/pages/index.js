@@ -14,8 +14,8 @@ const IndexPage = ({ data }) => {
       </p>
       <div className={homeImage}>
         <GatsbyImage
-          image={data.allMdx.nodes[0].featuredImg.childImageSharp.gatsbyImageData}
-          alt={data.allMdx.nodes[0].frontmatter.featuredImgAlt}
+          image={data.allMdx.nodes[0].featuredImgFiles[0].childImageSharp.gatsbyImageData}
+          alt={data.allMdx.nodes[0].frontmatter.featuredImgAlts[0]}
         />
       </div>
     </Layout>
@@ -26,7 +26,7 @@ export const query = graphql`
 query {
   allMdx(filter: {frontmatter: {title: {eq: "Home Photo"}}}) {
     nodes {
-      featuredImg {
+      featuredImgFiles {
         childImageSharp {
           gatsbyImageData(
             width: 800
@@ -34,7 +34,7 @@ query {
         }
       }
       frontmatter {
-        featuredImgAlt
+        featuredImgAlts
       }
     }
   }

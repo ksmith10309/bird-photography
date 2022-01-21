@@ -21,8 +21,8 @@ const BackyardPage = ({ data }) => {
             <div className={pageImage}>
               <Link to={`/backyard/${node.childMdx.slug}`}>
                 <GatsbyImage
-                  image={node.childMdx.featuredImg.childImageSharp.gatsbyImageData}
-                  alt={node.childMdx.frontmatter.featuredImgAlt}
+                  image={node.childMdx.featuredImgFiles[0].childImageSharp.gatsbyImageData}
+                  alt={node.childMdx.frontmatter.featuredImgAlts[0]}
                 />
               </Link>
             </div>
@@ -39,16 +39,16 @@ export const query = graphql`
     allFile(filter: {sourceInstanceName: {eq: "backyard"}}) {
       nodes {
         childMdx {
-          frontmatter {
-            title
-            featuredImgAlt
-          }
-          featuredImg {
+          featuredImgFiles {
             childImageSharp {
               gatsbyImageData(
                 width: 400
               )
             }
+          }
+          frontmatter {
+            title
+            featuredImgAlts
           }
           id
           slug

@@ -11,12 +11,16 @@ const BirdEntry = ({ pageContext }) => {
       <MDXRenderer>
         {data.body}
       </MDXRenderer>
-      <div className={entryImage}>
-        <GatsbyImage
-          image={data.featuredImg.childImageSharp.gatsbyImageData}
-          alt={data.frontmatter.featuredImgAlt}
-        />
-      </div>
+      {
+        data.featuredImgFiles.map((file, index) => (
+          <div key={file.childImageSharp.id} className={entryImage}>
+            <GatsbyImage
+              image={file.childImageSharp.gatsbyImageData}
+              alt={data.frontmatter.featuredImgAlts[index]}
+            />
+          </div>
+        ))
+      }
     </Layout>
   )
 }
