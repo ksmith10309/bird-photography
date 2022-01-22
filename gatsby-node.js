@@ -21,6 +21,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               title
               featuredImgUrls
               featuredImgAlts
+              featuredImgDates
+              featuredImgCredits
               path
             }
             body
@@ -64,6 +66,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       featuredImgUrls: [String]
       featuredImgAlts: [String]
+      featuredImgDates: [String]
+      featuredImgCredits: [String]
       path: String
     }
   `)

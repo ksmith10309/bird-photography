@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
 query {
-  allMdx(filter: {frontmatter: {title: {eq: "Home Photo"}}}) {
+  allMdx(filter: {frontmatter: {title: {eq: "Family"}}}) {
     nodes {
       featuredImgFiles {
         childImageSharp {

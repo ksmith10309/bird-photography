@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout'
-import { entryImage } from './entry.module.css'
+import { entryImage, entryImageCaption } from './entry.module.css'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 const BirdEntry = ({ pageContext }) => {
@@ -20,6 +20,7 @@ const BirdEntry = ({ pageContext }) => {
                 alt={data.frontmatter.featuredImgAlts[index]}
               />
             </a>
+            <p className={entryImageCaption}>Date Taken: {data.frontmatter.featuredImgDates[index]} | Photo Credit: {data.frontmatter.featuredImgCredits[index]}</p>
           </div>
         ))
       }
