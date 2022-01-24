@@ -1,14 +1,35 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import { container, heading, navLinks, navLinkItem, navLinkItemLast, navLinkText, activeNavLinkText, siteTitle, section } from './layout.module.css'
+import { Helmet } from 'react-helmet'
+import favicon from '../images/icon.png'
 import "@fontsource/architects-daughter"
 import "@fontsource/cairo"
 
 const Layout = ({ pageTitle, children }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          author
+          siteUrl
+        }
+      }
+    }
+  `)
+
   return (
     <div className={container}>
-      <title>Bird Photography | {pageTitle}</title>
-      <header className={siteTitle}>BIRD PHOTOGRAPHY</header>
+      <Helmet>
+        <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+        <meta name="description" content={data.site.siteMetadata.description} />
+        <meta name="author" content={data.site.siteMetadata.author} />
+        <link rel="canonical" href={data.site.siteMetadata.siteUrl} />
+        <link rel="icon" type="image/png" href={favicon} />
+      </Helmet>
+      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>

@@ -1,6 +1,9 @@
 module.exports = {
     siteMetadata: {
-        siteUrl: `https://www.yourdomain.tld`,
+        title: `Bird Photography`,
+        description: `Bird photography site of Katherine and Matt Smith`,
+        author: `Katherine Smith`,
+        siteUrl: `https://birdphotography.gatsbyjs.io`
     },
     plugins: [
         {
@@ -31,10 +34,11 @@ module.exports = {
             options: {
                 defaults: {
                     quality: 50,
-                    placeholder: 'blurred',
+                    placeholder: 'blurred'
                 }
             }
         },
         "gatsby-transformer-sharp",
+        "gatsby-plugin-react-helmet"
     ]
 }
