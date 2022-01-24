@@ -28,6 +28,7 @@ const Layout = ({ pageTitle, children }) => {
         <meta name="author" content={data.site.siteMetadata.author} />
         <link rel="canonical" href={data.site.siteMetadata.siteUrl} />
         <link rel="icon" type="image/png" href={favicon} />
+        <meta name="google-site-verification" content="sF_11Zb-CH4HvFSdrC9KasATpODwKc9QUr8OHSZBygA" />
       </Helmet>
       <header className={siteTitle}>{data.site.siteMetadata.title}</header>
       <nav>
