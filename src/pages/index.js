@@ -24,7 +24,7 @@ const IndexPage = ({ data: { mdx } }) => {
 
 export const query = graphql`
   query {
-    mdx(slug: {eq: "family"}) {
+    mdx(frontmatter: {title: {eq: "Family"}}) {
       featuredImgFiles {
         childImageSharp {
           gatsbyImageData(

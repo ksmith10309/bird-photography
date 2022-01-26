@@ -71,9 +71,9 @@ exports.createPages = async ({ graphql, actions }) => {
       allMdx {
         nodes {
           frontmatter {
+            title
             path
           }
-          slug
         }
       }
     }
@@ -84,7 +84,7 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: node.frontmatter.path,
       component: birdEntryTemplate,
-      context: { slug: node.slug }
+      context: { title: node.frontmatter.title }
     })
   })
 }

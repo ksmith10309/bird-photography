@@ -6,3 +6,11 @@
 .entry-image-caption {
   margin: 0px;
 }
+
+.entry-wiki-link {
+  color: LightSkyBlue;
+}
+
+.entry-wiki-link:hover {
+  color: NavajoWhite;
+}

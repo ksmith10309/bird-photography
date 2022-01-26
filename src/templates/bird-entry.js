@@ -1,26 +1,30 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../components/layout'
-import { entryImage, entryImageCaption } from './entry.module.css'
+import { entryImage, entryImageCaption, entryWikiLink } from './entry.module.css'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-const BirdEntry = ({ data: { mdx } }) => {
+const BirdEntry = ({ data }) => {
   return (
-    <Layout pageTitle={mdx.frontmatter.title}>
-      <MDXRenderer>
-        {mdx.body}
-      </MDXRenderer>
+    <Layout pageTitle={data.mdx.frontmatter.title}>
+      <p>
+        {data.wikipediaFetcher.extract}{" "}
+        <a href={data.wikipediaFetcher.requestArticle} target="_blank" rel="noopener noreferrer" class={entryWikiLink}>
+          Wikipedia
+        </a>
+      </p>
     {
-      mdx.featuredImgFiles.map((file, index) => (
+      data.mdx.featuredImgFiles.map((file, index) => (
         <div key={file.childImageSharp.id} className={entryImage}>
-          <a href={mdx.frontmatter.featuredImgUrls[index]} target="_blank" rel="noopener noreferrer">
+          <a href={data.mdx.frontmatter.featuredImgUrls[index]} target="_blank" rel="noopener noreferrer">
             <GatsbyImage
               image={file.childImageSharp.gatsbyImageData}
-              alt={mdx.frontmatter.featuredImgAlts[index]}
+              alt={data.mdx.frontmatter.featuredImgAlts[index]}
             />
           </a>
-          <p className={entryImageCaption}>Date Taken: {mdx.frontmatter.featuredImgDates[index]} | Photo Credit: {mdx.frontmatter.featuredImgCredits[index]}</p>
+          <p className={entryImageCaption}>
+            Date Taken: {data.mdx.frontmatter.featuredImgDates[index]} | Photo Credit: {data.mdx.frontmatter.featuredImgCredits[index]}
+          </p>
         </div>
       ))
     }
@@ -29,8 +33,8 @@ const BirdEntry = ({ data: { mdx } }) => {
 }
 
 export const query = graphql`
-  query ($slug: String) {
-    mdx(slug: {eq: $slug}) {
+  query ($title: String) {
+    mdx(frontmatter: {title: {eq: $title}}) {
       body
       featuredImgFiles {
         childImageSharp {
@@ -47,6 +51,10 @@ export const query = graphql`
         featuredImgDates
         featuredImgCredits
       }
+    }
+    wikipediaFetcher(title: {eq: $title}) {
+      extract
+      requestArticle
     }
   }
 `

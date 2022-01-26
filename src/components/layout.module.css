@@ -22,6 +22,7 @@ body {
   font-family: "Architects Daughter";
   margin: 2rem 0 0 0;
   padding: 15px 0px;
+  text-transform: capitalize;
 }
 
 .nav-links {
