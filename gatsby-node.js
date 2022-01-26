@@ -1,55 +1,3 @@
-// Programmatically Creating Pages 
-
-const path = require("path")
-
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
-
-  const result = await graphql(
-    `
-      query {
-        allMdx {
-          nodes {
-            featuredImgFiles {
-              childImageSharp {
-                gatsbyImageData(
-                  width: 800
-                )
-              }
-            }
-            frontmatter {
-              title
-              featuredImgUrls
-              featuredImgAlts
-              featuredImgDates
-              featuredImgCredits
-              path
-            }
-            body
-          }
-        }
-      }
-    `
-  )
-
-  if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
-  }
-
-  const birdEntryTemplate = path.resolve(`src/templates/bird-entry.js`)
-  result.data.allMdx.nodes.map(node => {
-    const path = node.frontmatter.path
-    createPage({
-      path,
-      component: birdEntryTemplate,
-      context: {
-        data: node,
-      },
-    })
-  })
-}
-
 // Preprocessing External Images
 
 const { createRemoteFileNode } = require("gatsby-source-filesystem")
@@ -109,4 +57,34 @@ exports.onCreateNode = async ({
       })
     }
   }
+}
+
+// Programmatically Creating Pages 
+
+const path = require("path")
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  const { data } = await graphql(`
+    query {
+      allMdx {
+        nodes {
+          frontmatter {
+            path
+          }
+          slug
+        }
+      }
+    }
+  `)
+
+  const birdEntryTemplate = path.resolve(`src/templates/bird-entry.js`)
+  data.allMdx.nodes.forEach(node => {
+    createPage({
+      path: node.frontmatter.path,
+      component: birdEntryTemplate,
+      context: { slug: node.slug }
+    })
+  })
 }

@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import { homeImage } from './page.module.css'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data: { mdx } }) => {
   return (
     <Layout pageTitle="Home">
       <p>
@@ -14,8 +14,8 @@ const IndexPage = ({ data }) => {
       </p>
       <div className={homeImage}>
         <GatsbyImage
-          image={data.allMdx.nodes[0].featuredImgFiles[0].childImageSharp.gatsbyImageData}
-          alt={data.allMdx.nodes[0].frontmatter.featuredImgAlts[0]}
+          image={mdx.featuredImgFiles[0].childImageSharp.gatsbyImageData}
+          alt={mdx.frontmatter.featuredImgAlts[0]}
         />
       </div>
     </Layout>
@@ -23,9 +23,8 @@ const IndexPage = ({ data }) => {
 }
 
 export const query = graphql`
-query {
-  allMdx(filter: {frontmatter: {title: {eq: "Family"}}}) {
-    nodes {
+  query {
+    mdx(slug: {eq: "family"}) {
       featuredImgFiles {
         childImageSharp {
           gatsbyImageData(
@@ -38,8 +37,6 @@ query {
       }
     }
   }
-}
-
 `
 
 export default IndexPage
