@@ -12,6 +12,7 @@
     { article: 'https://en.wikipedia.org/wiki/Family', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Bald_eagle', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Great_blue_heron', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/Osprey', language: 'en' },
   ];
 
   return articlesLanguages;
