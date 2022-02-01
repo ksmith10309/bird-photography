@@ -10,6 +10,7 @@
     { article: 'https://en.wikipedia.org/wiki/Spotted_towhee', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Varied_thrush', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Family', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/Bald_eagle', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Great_blue_heron', language: 'en' },
   ];
 
