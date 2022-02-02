@@ -5,12 +5,14 @@
   // Array of Wikipedia article titles (redirects are automatic) or full URLs and their language codes (may be empty strings).
   var articlesLanguages = [
     { article: 'https://en.wikipedia.org/wiki/Black-capped_chickadee', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/Cooper%27s_hawk', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Dark-eyed_junco', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Northern_flicker', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Spotted_towhee', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Varied_thrush', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Family', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Bald_eagle', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/Barred_owl', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Great_blue_heron', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Osprey', language: 'en' },
   ];
