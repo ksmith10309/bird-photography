@@ -9,12 +9,16 @@
     { article: 'https://en.wikipedia.org/wiki/Dark-eyed_junco', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Northern_flicker', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Spotted_towhee', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/Steller%27s_jay', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Varied_thrush', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Family', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Bald_eagle', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Barred_owl', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/California_quail', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Great_blue_heron', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Osprey', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/White-crowned_sparrow', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/Woodhouse%27s_scrub_jay', language: 'en' },
   ];
 
   return articlesLanguages;
