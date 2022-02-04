@@ -1,20 +1,25 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { entryWikiLink } from '../templates/entry.module.css'
 
 // styles
 const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  color: "#FFFFFF",
+  padding: "100px 10px",
+  fontFamily: "Cairo",
 }
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
-  maxWidth: 320,
+  marginLeft: "auto",
+  marginRight: "auto",
+  maxWidth: 400,
 }
-
 const paragraphStyles = {
   marginBottom: 48,
+  marginLeft: "auto",
+  marginRight: "auto",
+  maxWidth: 400,
 }
 const codeStyles = {
   color: "#8A6534",
@@ -40,12 +45,12 @@ const NotFoundPage = () => {
         {process.env.NODE_ENV === "development" ? (
           <>
             <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
+            Try creating a page in <code style={codeStyles}>src/pages/</code>
             <br />
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <Link to="/" className={entryWikiLink}>Go home</Link>
       </p>
     </main>
   )
