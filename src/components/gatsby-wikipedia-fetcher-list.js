@@ -8,6 +8,7 @@
     { article: 'https://en.wikipedia.org/wiki/Black-capped_chickadee', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Cooper%27s_hawk', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Dark-eyed_junco', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/Fox_sparrow', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Northern_flicker', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Spotted_towhee', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Steller%27s_jay', language: 'en' },
