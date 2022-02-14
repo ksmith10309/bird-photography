@@ -40,6 +40,12 @@ module.exports = {
         },
         "gatsby-transformer-sharp",
         "gatsby-plugin-react-helmet",
+        {
+            resolve: "gatsby-plugin-sitemap",
+            options: {
+                excludes: ['/family']
+            }
+        },
         "gatsby-wikipedia-fetcher"
     ]
 }
