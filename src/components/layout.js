@@ -21,10 +21,12 @@ const Layout = ({ pageTitle, children }) => {
     }
   `)
 
+  const capitalizeTitle = pageTitle.split(' ').map(x => x[0].toUpperCase() + x.substring(1)).join(' ');
+
   return (
     <div className={container}>
       <Helmet>
-        <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+        <title>{capitalizeTitle} | {data.site.siteMetadata.title}</title>
         <meta name="description" content={data.site.siteMetadata.description} />
         <meta name="author" content={data.site.siteMetadata.author} />
         <link rel="canonical" href={data.site.siteMetadata.siteUrl} />
@@ -60,7 +62,7 @@ const Layout = ({ pageTitle, children }) => {
         </ul>
       </nav>
       <main>
-        <h1 className={heading}>{pageTitle}</h1>
+        <h1 className={heading}>{capitalizeTitle}</h1>
         <section className={section}>
           {children}
         </section>
