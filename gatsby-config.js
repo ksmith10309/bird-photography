@@ -39,6 +39,18 @@ module.exports = {
             }
         },
         "gatsby-transformer-sharp",
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `Bird Photography`,
+                short_name: `Bird Photography`,
+                start_url: `/`,
+                background_color: `#282828`,
+                theme_color: `#87CEFA`,
+                display: `standalone`,
+                icon: `src/images/icon.png`,
+            }
+        },
         "gatsby-plugin-react-helmet",
         {
             resolve: "gatsby-plugin-sitemap",

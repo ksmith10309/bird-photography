@@ -2,8 +2,6 @@ import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { container, heading, navLinks, navLinkItem, navLinkItemLast, navLinkText, activeNavLinkText, siteTitle, section } from './layout.module.css'
 import { Helmet } from 'react-helmet'
-import favicon from '../images/icon.png'
-import appleTouchIcon from '../images/apple-touch-icon.png'
 import "@fontsource/architects-daughter"
 import "@fontsource/cairo"
 
@@ -30,8 +28,6 @@ const Layout = ({ pageTitle, children }) => {
         <meta name="description" content={data.site.siteMetadata.description} />
         <meta name="author" content={data.site.siteMetadata.author} />
         <link rel="canonical" href={data.site.siteMetadata.siteUrl} />
-        <link rel="icon" type="image/png" href={favicon} />
-        <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
         <meta name="google-site-verification" content="sF_11Zb-CH4HvFSdrC9KasATpODwKc9QUr8OHSZBygA" />
       </Helmet>
       <header className={siteTitle}>{data.site.siteMetadata.title}</header>
