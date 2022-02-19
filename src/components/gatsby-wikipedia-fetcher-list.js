@@ -19,6 +19,7 @@
     { article: 'https://en.wikipedia.org/wiki/Bald_eagle', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Barred_owl', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/California_quail', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/Caspian_tern', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Golden_eagle', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Great_blue_heron', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Osprey', language: 'en' },
