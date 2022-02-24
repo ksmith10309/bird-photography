@@ -18,6 +18,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       featuredImgCredits: [String]
       path: String
     }
+    type WikipediaFetcher implements Node {
+      title: String
+      extract: String
+      requestArticle: String
+    }
   `)
 }
 
