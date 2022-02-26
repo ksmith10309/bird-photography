@@ -12,6 +12,7 @@
     { article: 'https://en.wikipedia.org/wiki/Golden-crowned_sparrow', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Northern_flicker', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Pine_siskin', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/Song_sparrow', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Spotted_towhee', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Steller%27s_jay', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Varied_thrush', language: 'en' },
