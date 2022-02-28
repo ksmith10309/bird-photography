@@ -21,6 +21,7 @@ body {
   border-bottom: 2px solid rgb(175, 175, 175);
   color: LightSkyBlue;
   font-family: "Architects Daughter";
+  font-size: 2rem;
   margin: 2rem 0 0 0;
   padding: 15px 0px;
 }
@@ -57,14 +58,19 @@ body {
 
 @media (max-width: 800px) {
   .site-title {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+    margin: 3rem 0 2.5rem 0;
+  }
+
+  .heading {
+    font-size: 1.8rem;
   }
 
   .nav-links {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .nav-link-item {
-    padding-right: 1.7rem;
+    padding-right: 1.5rem;
   }
 }
