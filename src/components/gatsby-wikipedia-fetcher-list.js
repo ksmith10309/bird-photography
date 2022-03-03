@@ -5,6 +5,7 @@
   // Array of Wikipedia article titles (redirects are automatic) or full URLs and their language codes (may be empty strings).
   var articlesLanguages = [
     { article: 'https://en.wikipedia.org/wiki/American_bushtit', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/American_goldfinch', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Black-capped_chickadee', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Common_starling', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Cooper%27s_hawk', language: 'en' },
