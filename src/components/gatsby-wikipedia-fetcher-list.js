@@ -7,6 +7,7 @@
     { article: 'https://en.wikipedia.org/wiki/American_bushtit', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/American_goldfinch', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Black-capped_chickadee', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/Chestnut-backed_chickadee', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Common_starling', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Cooper%27s_hawk', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Dark-eyed_junco', language: 'en' },
