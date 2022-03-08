@@ -6,6 +6,7 @@
   var articlesLanguages = [
     { article: 'https://en.wikipedia.org/wiki/American_bushtit', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/American_goldfinch', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/Anna%27s_hummingbird', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Black-capped_chickadee', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Chestnut-backed_chickadee', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Common_starling', language: 'en' },
