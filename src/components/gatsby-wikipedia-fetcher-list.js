@@ -15,6 +15,7 @@
     { article: 'https://en.wikipedia.org/wiki/Golden-crowned_sparrow', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Northern_flicker', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Pine_siskin', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/Red-breasted_nuthatch', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Red-winged_blackbird', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Song_sparrow', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Spotted_towhee', language: 'en' },
