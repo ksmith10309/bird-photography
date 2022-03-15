@@ -33,6 +33,7 @@
     { article: 'https://en.wikipedia.org/wiki/Golden_eagle', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Great_blue_heron', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Osprey', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/Ruby-crowned_kinglet', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Tree_swallow', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Trumpeter_swan', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/White-crowned_sparrow', language: 'en' },
