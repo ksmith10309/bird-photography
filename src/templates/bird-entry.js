@@ -33,8 +33,8 @@ const BirdEntry = ({ data }) => {
 }
 
 export const query = graphql`
-  query ($title: String) {
-    mdx(frontmatter: {title: {eq: $title}}) {
+  query ($path: String, $title: String) {
+    mdx(frontmatter: {path: {eq: $path}}) {
       body
       featuredImgFiles {
         childImageSharp {
