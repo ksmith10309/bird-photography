@@ -7,6 +7,7 @@
     { article: 'https://en.wikipedia.org/wiki/American_bushtit', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/American_crow', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/American_goldfinch', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/American_robin', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Anna%27s_hummingbird', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Band-tailed_pigeon', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Black-capped_chickadee', language: 'en' },
