@@ -17,6 +17,7 @@
     { article: 'https://en.wikipedia.org/wiki/Dark-eyed_junco', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Fox_sparrow', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Golden-crowned_sparrow', language: 'en' },
+    { article: 'https://en.wikipedia.org/wiki/House_finch', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Mallard', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Northern_flicker', language: 'en' },
     { article: 'https://en.wikipedia.org/wiki/Pine_siskin', language: 'en' },
