@@ -29,6 +29,7 @@ const Layout = ({ pageTitle, children }) => {
         <meta name="author" content={data.site.siteMetadata.author} />
         <link rel="canonical" href={data.site.siteMetadata.siteUrl} />
         <meta name="google-site-verification" content="sF_11Zb-CH4HvFSdrC9KasATpODwKc9QUr8OHSZBygA" />
+        <meta name="google-site-verification" content="NH1cI8HCk2gFpRCishdmA4YB3fzYeWH5b6Q8fYPpJ_8" />
       </Helmet>
       <header className={siteTitle}>{data.site.siteMetadata.title}</header>
       <nav>
