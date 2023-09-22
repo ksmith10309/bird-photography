@@ -58,6 +58,7 @@ module.exports = {
                 excludes: ['/family']
             }
         },
-        "gatsby-wikipedia-fetcher"
+        "gatsby-wikipedia-fetcher",
+        "gatsby-plugin-netlify"
     ]
 }
